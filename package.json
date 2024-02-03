@@ -1,6 +1,6 @@
 {
   "name": "vue2-virtual-list",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "vue2 virtual list",
   "main": "dist/index.umd.js",
   "module": "dist/index.mjs",
@@ -19,6 +19,10 @@
     "virtual",
     "list"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xuemiyang/vue2-virtual-list.git"
+  },
   "devDependencies": {
     "typescript": "^4.5.5",
     "vite": "^4.5.2",
