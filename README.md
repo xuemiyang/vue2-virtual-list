@@ -11,21 +11,10 @@ npm install @xuemiyang/vue2-virtual-list
 ## Usage
 
 ```vue
-<script setup lang="ts">
-import { ref } from "vue";
-import { VirtualList } from "@xuemiyang/vue2-virtual-list";
-import "@xuemiyang/vue2-virtual-list/dist/style.css";
-
-const allList = ref<any[]>([]);
-
-for (let i = 0; i < 10000000; i++) {
-  allList.value.push({ title: `title ${i}` });
-}
-</script>
-
 <template>
   <div>
     <VirtualList
+      ref="list"
       class="list"
       type="horizontal"
       :item-width="200"
@@ -44,6 +33,30 @@ for (let i = 0; i < 10000000; i++) {
     </VirtualList>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from "vue";
+import { VirtualList } from "@xuemiyang/vue2-virtual-list";
+import "@xuemiyang/vue2-virtual-list/dist/style.css";
+
+export default Vue.extend({
+  components: {
+    VirtualList
+  },
+  data() {
+    return {
+      allList: []
+    } as {
+      allList: any[]
+    }
+  },
+  created() {
+      for (let i = 0; i < 10000000; i++) {
+        this.allList.push({ title: `title ${i}` });
+      }      
+  },
+})
+</script>
 
 <style scoped>
 .list {

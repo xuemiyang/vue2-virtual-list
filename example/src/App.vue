@@ -40,11 +40,7 @@ export default Vue.extend({
   created() {
       for (let i = 0; i < 10000000; i++) {
         this.allList.push({ title: `title ${i}` });
-      }
-      
-  },
-  mounted() {
-    console.log(this.$refs.list) 
+      }      
   },
 })
 </script>
