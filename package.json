@@ -1,5 +1,5 @@
 {
-  "name": "vue2-virtual-list",
+  "name": "@xuemiyang/vue2-virtual-list",
   "version": "1.0.0",
   "description": "vue2 virtual list",
   "main": "dist/index.umd.js",
